@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/spaceship.png" type="Texture" id=1]
+[ext_resource path="res://src/scripts/spaceship.gd" type="Script" id=2]
+[ext_resource path="res://src/objects/Gun.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/effects/Thruster.tscn" type="PackedScene" id=4]
+
+[node name="Spaceship" type="Area2D"]
+collision_mask = 6
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 500, 100 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -12, -9, -38, -9, -38, 21, 38, 21, 38, -9, 12, -9, 12, -40, -12, -40 )
+
+[node name="Gun2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 26, -35 )
+
+[node name="Gun" parent="." instance=ExtResource( 3 )]
+position = Vector2( -27, -35 )
+
+[node name="Thruster2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 26, 35 )
+
+[node name="Thruster" parent="." instance=ExtResource( 4 )]
+position = Vector2( -25, 35 )
+
+[connection signal="area_entered" from="." to="." method="_on_Spaceship_area_entered"]
+[connection signal="area_shape_entered" from="." to="." method="_on_Spaceship_area_shape_entered"]
