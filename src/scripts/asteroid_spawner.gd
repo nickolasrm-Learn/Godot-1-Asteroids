@@ -21,5 +21,5 @@ func _on_Spawner_timeout():
 	reset_timer()
 	var asteroid = asteroid_object.instance()
 	asteroid.global_position.y = rand_range(-300, -100)
-	asteroid.global_position.x = rand_range(0, get_viewport().size[0])
+	asteroid.global_position.x = rand_range(0, get_viewport().get_visible_rect().size[0])
 	add_child(asteroid)
