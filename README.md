@@ -2,17 +2,17 @@
 This project recreates a different version of the asteroids game, a version in which the asteroids come always from top and the player has its movements limited to left and right.
 
 # Screenshots
-![Main menu]()
+![Main menu](https://github.com/nickolasrm-Learn/Godot-1-Asteroids/blob/main/mainmenu.jpg?raw=true)
 _Main menu_
 
-![Game]()
+![Game](https://github.com/nickolasrm-Learn/Godot-1-Asteroids/blob/main/game.jpg?raw=true)
 _Game_
 
-![Game over]()
+![Game over](https://github.com/nickolasrm-Learn/Godot-1-Asteroids/blob/main/gameover.jpg?raw=true)
 _Game over_
 
 # How to play it?
-Just access this [link](#)
+Just access this [link](https://nickolasrm-learn.github.io/Godot-1-Asteroids)
 
 # How do I learn how to make it?
 Pretty good ways to start:
